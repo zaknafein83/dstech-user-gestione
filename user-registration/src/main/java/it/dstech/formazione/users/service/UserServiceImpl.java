@@ -40,4 +40,11 @@ public class UserServiceImpl implements UserService {
 		userRepository.save(user);
 	}
 
+	@Override
+	public boolean findByUsername(User user) {
+		// TODO Auto-generated method stub
+		User findByUsername = userRepository.findByUsername(user.getUsername());
+		return findByUsername != null;
+	}
+
 }

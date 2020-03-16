@@ -12,4 +12,6 @@ public interface UserService {
 	void deleteById(Long userId);
 
 	void add(User user);
+
+	boolean findByUsername(User user);
 }
