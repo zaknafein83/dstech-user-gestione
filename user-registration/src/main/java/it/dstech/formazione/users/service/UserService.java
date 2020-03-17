@@ -14,4 +14,6 @@ public interface UserService {
 	void add(User user);
 
 	boolean findByUsername(User user);
+	
+	boolean findByUsernameOrEmail(User user);
 }

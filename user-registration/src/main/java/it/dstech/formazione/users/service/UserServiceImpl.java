@@ -42,8 +42,13 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public boolean findByUsername(User user) {
-		// TODO Auto-generated method stub
 		User findByUsername = userRepository.findByUsername(user.getUsername());
+		return findByUsername != null;
+	}
+
+	@Override
+	public boolean findByUsernameOrEmail(User user) {
+		User findByUsername = userRepository.findByUsernameOrEmail(user.getUsername(), user.getEmail());
 		return findByUsername != null;
 	}
 

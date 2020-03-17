@@ -27,7 +27,7 @@ public class MyUserController {
 
 	@PostMapping("/user")
 	public boolean addUser(@RequestBody User user) throws MessagingException {
-		if (userService.findByUsername(user)) {
+		if (userService.findByUsernameOrEmail(user)) {
 			return false;
 		}
 		userService.add(user);
