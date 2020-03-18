@@ -37,6 +37,8 @@ public class MyUserController {
 	@Autowired
 	private ImmagineService imageService;
 
+	
+	
 	@PostMapping("/user")
 	public boolean addUser(@RequestBody User user) throws MessagingException {
 		if (userService.findByUsernameOrEmail(user)) {
