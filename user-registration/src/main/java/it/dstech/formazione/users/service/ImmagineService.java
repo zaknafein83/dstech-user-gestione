@@ -6,8 +6,8 @@ import it.dstech.formazione.users.model.Immagine;
 
 public interface ImmagineService {
 
-	public Immagine salvaFile(MultipartFile file);
+	public Immagine salvaFile(MultipartFile file); // upload
 
-	public Immagine recuperaFile(Long fileId);
+	public Immagine recuperaFile(Long fileId); // download
 
 }

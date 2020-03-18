@@ -66,14 +66,14 @@ public class MyUserController {
 	}
 
 	@PostMapping("/image")
-	public void handleFileUpload(@RequestParam("file") MultipartFile file) {
+	public void fileUpload(@RequestParam("file") MultipartFile file) { // upload del fils
 
 		imageService.salvaFile(file);
 
 	}
 
 	@GetMapping("/downloadFile/{fileId}")
-	public ResponseEntity<Resource> downloadFile(@PathVariable Long fileId) {
+	public ResponseEntity<Resource> downloadFile(@PathVariable Long fileId) { // servizio di download
 		// Load file from database
 		Immagine dbFile = imageService.recuperaFile(fileId);
 
